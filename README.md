@@ -23,34 +23,13 @@ Apache Airflow manages scheduling, task dependencies, retries, and workflow exec
 | Docker Compose | Local service orchestration |
 | Git and GitHub | Version control and source code management |
 
-## 🏗️ Architecture
+## 🏗️ Data Pipeline Architecture
 
-```text
-        External Flight Data REST API
-                     |
-                     v
-             Apache Airflow
-           Scheduling and DAGs
-                     |
-                     v
-              Python Ingestion
-                     |
-                     v
-              BRONZE LAYER
-               Raw Flight Data
-                     |
-                     v
-              SILVER LAYER
-         Cleaned and Normalized Data
-                     |
-                     v
-               GOLD LAYER
-          Country-level flight KPIs
-                     |
-                     v
-             SNOWFLAKE WAREHOUSE
-           Analytics-Ready Tables
-```
+The following diagram illustrates the end-to-end flight data pipeline, from OpenSky Network API ingestion through Bronze, Silver, and Gold transformations to the Snowflake data warehouse.
+
+<p align="center">
+  <img src="screenshots/flight_data_pipeline_architecture.png" alt="Flight Operations Data Engineering Pipeline Architecture" width="100%">
+</p>
 
 ## 🥉 Bronze Layer — Raw Data
 
