@@ -1,7 +1,7 @@
 services:
   postgres:
     image: postgres:15
-    container_name: airflow-postgres
+    #container_name: airflow-postgres
     restart: always
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
@@ -14,7 +14,7 @@ services:
 
   airflow-init:
     image: apache/airflow:2.9.3
-    container_name: airflow-init
+    #container_name: airflow-init
     depends_on:
       - postgres
     environment:
@@ -32,7 +32,7 @@ services:
 
   airflow-webserver:
     image: apache/airflow:2.9.3
-    container_name: airflow-webserver
+    #container_name: airflow-webserver
     restart: always
     depends_on:
       - airflow-init
@@ -53,7 +53,7 @@ services:
 
   airflow-scheduler:
     image: apache/airflow:2.9.3
-    container_name: airflow-scheduler
+    #container_name: airflow-scheduler
     restart: always
     depends_on:
       - airflow-init

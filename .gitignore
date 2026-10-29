@@ -1,0 +1,24 @@
+# Virtual environments
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python cache folders and compiled files
+__pycache__/
+*.py[cod]
+
+# Logs
+logs/
+*.log
+
+# Generated pipeline data
+data/*
+!data/.gitkeep
+
+# IDE files
+.vscode/
+.idea/
