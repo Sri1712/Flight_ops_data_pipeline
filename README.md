@@ -106,6 +106,9 @@ The workflow is designed to support:
 - Idempotent task execution.
 - Monitoring through Airflow task logs.
 
+## 📸 Airflow Pipeline Execution
+![Flight Data Pipeline DAG](screenshots/airflow_pipeline.png)
+
 ## 🔐 Configuration and Security
 
 Configure the required API credentials and Snowflake connection settings through environment variables or Airflow connections, according to the project implementation.
