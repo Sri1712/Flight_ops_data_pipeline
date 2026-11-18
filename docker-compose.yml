@@ -10,7 +10,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "5433:5432"
 
   airflow-init:
     image: apache/airflow:2.9.3
@@ -48,7 +48,7 @@ services:
       - ./plugins:/opt/airflow/plugins
       - ./data:/opt/airflow/data
     ports:
-      - "8080:8080"
+      - "8081:8080"
     command: webserver
 
   airflow-scheduler:
